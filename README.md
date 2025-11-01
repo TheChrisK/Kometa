@@ -9,7 +9,7 @@ Credit to [@meisnate12](https://github.com/meisnate12) for Kometa and related im
 
 These setups may not work unless you are on the `develop` or `nightly` branch of Kometa.
 
-<img src="https://github.com/TheChrisK/PMM/blob/main/images/Collections.png?raw=true">
+<img src="https://github.com/TheChrisK/Kometa/blob/main/images/Collections.png?raw=true">
 
 # Movies
 
@@ -22,7 +22,7 @@ The films come from my own Trakt collections. If you have a movie that needs to 
 
 The below posters were created by me using the Kometa default template provided by [@meisnate12](https://github.com/meisnate12).
 
-<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/cities.png">
+<img src="https://raw.githubusercontent.com/TheChrisK/Kometa/main/images/cities.png">
 
 ```yaml
 #####################
@@ -89,7 +89,7 @@ collections:
 I created a simple config to generate a "Weekly Random" collection. It searches all your Plex movies, grabs 10 at random and adds them to the collection. This is scheduled to run on Mondays in the 6am to 7am hours. 
 If you have your Kometa run more than once per day, you will need to adjust the schedule as it will reset on each run for Monday.
 
-<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/weekly.png">
+<img src="https://raw.githubusercontent.com/TheChrisK/Kometa/main/images/weekly.png">
 
 ```yaml
 #####################
@@ -97,7 +97,7 @@ If you have your Kometa run more than once per day, you will need to adjust the 
 #####################
 templates:
   random:
-    url_poster: https://raw.githubusercontent.com/TheChrisK/PMM/main/assets/plex/Collections/Weekly%20Random%20Movies/poster.png
+    url_poster: https://raw.githubusercontent.com/TheChrisK/Kometa/main/assets/plex/Collections/Weekly%20Random%20Movies/poster.png
     sort_title: "!058_<<collection_name>>"
     summary: "A weekly collection of 10 random movies. Changes every Monday."
     sync_mode: sync
@@ -120,7 +120,7 @@ collections:
 
 ### Top Actors and Directors
 
-<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/top-people.png">
+<img src="https://raw.githubusercontent.com/TheChrisK/Kometa/main/images/top-people.png">
 <sup>People posters courtesy of @pterisaur.</sup>
 
 This config will add dynamic collections for the top rated actors and directors that exist in your library.
@@ -133,15 +133,15 @@ Add the following to your **Movie** `collection_files:` section:
 
 ```yaml
 collection_files:
-  - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/People/People.yml
+  - url: https://raw.githubusercontent.com/TheChrisK/Kometa/main/People/People.yml
 ```
-If you wish to customize this config, you may [download it](https://raw.githubusercontent.com/TheChrisK/PMM/main/People/People.yml) and reference it locally.
+If you wish to customize this config, you may [download it](https://raw.githubusercontent.com/TheChrisK/Kometa/main/People/People.yml) and reference it locally.
 
 ## Overlays
 
 ### Media Stinger
 
-<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/mediastinger-text.png">
+<img src="https://raw.githubusercontent.com/TheChrisK/Kometa/main/images/mediastinger-text.png">
 
 **[Media Stinger](https://mediastinger.com)** is a website that tells you if a mid-credit or post-credit scene exists.
 
@@ -150,8 +150,8 @@ Add the following to your library block in your `config.yml`
 ```yaml
     - default: mediastinger
       template_variables:
-        url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-left/mediastinger-bottom-left.png
-       #url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-left/mediastinger-bottom-left-notext.png #USE THIS IF YOU WANT JUST THE LOGO AND NO TEXT
+        url: https://raw.githubusercontent.com/TheChrisK/Kometa/main/overlays/bottom-left/mediastinger-bottom-left.png
+       #url: https://raw.githubusercontent.com/TheChrisK/Kometa/main/overlays/bottom-left/mediastinger-bottom-left-notext.png #USE THIS IF YOU WANT JUST THE LOGO AND NO TEXT
         vertical_align: bottom
         vertical_offset: 0
         horizontal_align: right
@@ -163,11 +163,11 @@ Add the following to your library block in your `config.yml`
 
 ### Movie Audio and Video Codec Ribbon
 
-<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/av-top-left.png">
+<img src="https://raw.githubusercontent.com/TheChrisK/Kometa/main/images/av-top-left.png">
 
 This configuration will add the audio codec and video resolution to the top left of your posters. These are designed to work together to remain centered. 
 
-**NOTE:** [This config adds a black background prior to the audio and video overlays.](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Background.yml) If you use this overlay, the Background must be run before the `-pmm: resolution` and `-pmm: audio_codec` defaults
+**NOTE:** [This config adds a black background prior to the audio and video overlays.](https://raw.githubusercontent.com/TheChrisK/Kometa/main/overlays/Background.yml) If you use this overlay, the Background must be run before the `-Kometa: resolution` and `-Kometa: audio_codec` defaults
 
 Add the below to your 'Movies' section of your `config.yml`
 
@@ -175,10 +175,10 @@ Add the below to your 'Movies' section of your `config.yml`
   Movies:
     #schedule_overlays: hourly(06-07) #RUNS DAILY DURING THE 6AM and 7AM HOURS. UNCOMMENT AND UPDATE AS NEEDED
     overlay_files:
-    - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Background.yml #REQUIRED: PLACES A BLACK BACGROUND IN THE TOP LEFT CORNER BEFORE THE RESOLUTION AND CODEC OVERLAYS
+    - url: https://raw.githubusercontent.com/TheChrisK/Kometa/main/overlays/Background.yml #REQUIRED: PLACES A BLACK BACGROUND IN THE TOP LEFT CORNER BEFORE THE RESOLUTION AND CODEC OVERLAYS
     - default: resolution
       template_variables:
-        url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/resolution-top-left-45deg/<<overlay_name>>.png
+        url: https://raw.githubusercontent.com/TheChrisK/Kometa/main/overlays/resolution-top-left-45deg/<<overlay_name>>.png
         horizontal_align: left
         horizontal_offset: 0
         vertical_offset: 0
@@ -197,7 +197,7 @@ Add the below to your 'Movies' section of your `config.yml`
         #use_edition: false
     - default: audio_codec
       template_variables:
-        url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/audio-top-left-45deg/<<key>>.png
+        url: https://raw.githubusercontent.com/TheChrisK/Kometa/main/overlays/audio-top-left-45deg/<<key>>.png
         horizontal_align: left
         horizontal_offset: 0
         vertical_offset: 0
@@ -210,9 +210,9 @@ Add the below to your 'Movies' section of your `config.yml`
 
 ### Movie Top Ranked Ribbon
 
-<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/top-bottom-right.png">
+<img src="https://raw.githubusercontent.com/TheChrisK/Kometa/main/images/top-bottom-right.png">
 
-This will add top lists in the bottom right. The [config](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml) optionally has bottom ranked lists but for now those are commented out.
+This will add top lists in the bottom right. The [config](https://raw.githubusercontent.com/TheChrisK/Kometa/main/overlays/Top.yml) optionally has bottom ranked lists but for now those are commented out.
 
 The lists include:
 
@@ -227,7 +227,7 @@ Add the below to your 'Movies' section of your `config.yml`
 
 ```yaml
 overlay_files:
-  - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml #BOTTOM RIGHT OVERLAY FOR IMDB TOP 250, RT FRESH, MC MUST SEE AND LETTERBOX 1000
+  - url: https://raw.githubusercontent.com/TheChrisK/Kometa/main/overlays/Top.yml #BOTTOM RIGHT OVERLAY FOR IMDB TOP 250, RT FRESH, MC MUST SEE AND LETTERBOX 1000
 ```
 # TV Shows
 
@@ -235,7 +235,7 @@ overlay_files:
 
 ### TV Show Network and Status
 
-<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/status-top-left.png">
+<img src="https://raw.githubusercontent.com/TheChrisK/Kometa/main/images/status-top-left.png">
 
 **This will add the network and status of the show in the top left corner of the poster**
 
@@ -243,9 +243,9 @@ Add the below to your 'TV Shows' section of your `config.yml`
 ```yaml
     overlay_files:
     - remove_overlays: false
-    - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Status.yml #AIRING STATUS OVERLAY CONFIG
+    - url: https://raw.githubusercontent.com/TheChrisK/Kometa/main/overlays/Status.yml #AIRING STATUS OVERLAY CONFIG
     #- default: network #DEFAULT OVERLAY FROM KOMETA TEAM
-    - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/network.yml #SAME AS DEFAULT WITH FIXES FOR MISSING NETWORKS (APPLE TV, MUBI, etc...)
+    - url: https://raw.githubusercontent.com/TheChrisK/Kometa/main/overlays/network.yml #SAME AS DEFAULT WITH FIXES FOR MISSING NETWORKS (APPLE TV, MUBI, etc...)
       template_variables:
         horizontal_align: left
         horizontal_offset: 0
@@ -253,17 +253,17 @@ Add the below to your 'TV Shows' section of your `config.yml`
         vertical_align: top
         back_width: 1000
         back_height: 1500
-        url_#0: https://raw.githubusercontent.com/TheChrisK/PMM/refs/heads/main/overlays/network-top-left/%230.png   #THIS NETWORK CONTAINS A UNICODE CHARACTER WHICH DOESN'T WORK AS-IS
+        url_#0: https://raw.githubusercontent.com/TheChrisK/Kometa/refs/heads/main/overlays/network-top-left/%230.png   #THIS NETWORK CONTAINS A UNICODE CHARACTER WHICH DOESN'T WORK AS-IS
         #use_#0: false  #TO SKIP THIS OVERLAY, UNCOMMENT THIS LINE AND COMMENT OUT THE ABOVE LINE.
-        url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/network-top-left/<<key>>.png
+        url: https://raw.githubusercontent.com/TheChrisK/Kometa/main/overlays/network-top-left/<<key>>.png
         back_color: 000
 ```
 
 ### TV Shows Top Ranked Ribbon
 
-<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/top-bottom-right-show.png">
+<img src="https://raw.githubusercontent.com/TheChrisK/Kometa/main/images/top-bottom-right-show.png">
 
-Same config as the [Movies](https://github.com/TheChrisK/PMM/main/README.md#movie-top-ranked-ribbon), this will add top rankings in the bottom right. The config is [here](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml).
+Same config as the [Movies](https://github.com/TheChrisK/Kometa/main/README.md#movie-top-ranked-ribbon), this will add top rankings in the bottom right. The config is [here](https://raw.githubusercontent.com/TheChrisK/Kometa/main/overlays/Top.yml).
 
 The lists include:
 
@@ -277,5 +277,5 @@ Add the below to your 'Movies' section of your `config.yml`
 
 ```yaml
 overlay_files:
-  - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml #BOTTOM RIGHT OVERLAY FOR IMDB TOP 250, RT FRESH AND MC MUST SEE.
+  - url: https://raw.githubusercontent.com/TheChrisK/Kometa/main/overlays/Top.yml #BOTTOM RIGHT OVERLAY FOR IMDB TOP 250, RT FRESH AND MC MUST SEE.
 ```
