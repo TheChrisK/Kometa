@@ -29,7 +29,7 @@ The below posters were created by me using the Kometa default template provided 
 #####################
 templates:
   City:
-    file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.png
+    file_poster: https://raw.githubusercontent.com/TheChrisK/Kometa/main/assets/plex/Collections/<<collection_name>>/poster.png
     sort_title: "!105_<<collection_name>>"
     collection_order: title.asc
     content_rating: R
