@@ -17,8 +17,7 @@ These setups may not work unless you are on the `develop` or `nightly` branch of
 
 ### Cities Collection
 
-This collection includes films where the city plays a character role in the story. For now this is only in the U.S.
-The films come from my own Trakt collections. If you have a movie that needs to be added, please let me know.
+This collection includes films where the city plays a central role in the story or is primarily set in said city. The films come from my own MDBList collections. If you have a movie that needs to be added, please let me know.
 
 The below posters were created by me using the Kometa default template provided by [@meisnate12](https://github.com/meisnate12).
 
@@ -34,9 +33,9 @@ templates:
     sort_title: "!105_<<collection_name>>"
     collection_order: title.asc
     content_rating: R
-    summary: "A selection of films where the City of <<city>> plays a character role."
+    summary: "A curated collection of films set in or featuring the city of <<city>>."
     sync_mode: sync
-    #schedule: hourly(18) #OPTIONAL SCHEDULED RUN 
+    schedule: hourly(15-21)
 
 #####################
 #    COLLECTIONS    #
@@ -66,6 +65,12 @@ collections:
       city: Las Vegas
     mdblist_list: https://mdblist.com/lists/oldmankestis/las-vegas
 
+  London Collection:
+    template: 
+      name: City
+      city: London
+    mdblist_list: https://mdblist.com/lists/oldmankestis/london
+
   Los Angeles Collection:
     template: 
       name: City
@@ -77,12 +82,25 @@ collections:
       name: City
       city: New York
     mdblist_list: https://mdblist.com/lists/oldmankestis/new-york
+
+  Philadelphia Collection:
+    template:
+      name: City
+      city: Philadelphia
+    mdblist_list: https://mdblist.com/lists/oldmankestis/philadelphia
+
+  San Francisco Collection:
+    template:
+      name: City
+      city: San Francisco
+    mdblist_list: https://mdblist.com/lists/oldmankestis/san-francisco
     
   Washington D.C. Collection:
     template:
       name: City
       city: Washington DC
     mdblist_list: https://mdblist.com/lists/oldmankestis/washington-dc
+
 ```
 
 ### Weekly Random Collection
