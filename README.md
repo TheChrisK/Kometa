@@ -35,7 +35,7 @@ templates:
     content_rating: R
     summary: "A curated collection of films set in or featuring the city of <<city>>."
     sync_mode: sync
-    schedule: hourly(15-21)
+    #schedule: hourly(15-21)   #UNCOMMENT AND UPDATE THIS TO FIT YOUR SCHEDULING NEEDS
 
 #####################
 #    COLLECTIONS    #
