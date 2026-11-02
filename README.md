@@ -29,10 +29,10 @@ The below posters were created by me using the Kometa default template provided 
 #####################
 templates:
   City:
-    file_poster: https://raw.githubusercontent.com/TheChrisK/Kometa/main/assets/plex/Collections/<<collection_name>>/poster.png
-    sort_title: "!105_<<collection_name>>"
+    url_poster: https://raw.githubusercontent.com/TheChrisK/Kometa/main/assets/plex/Collections/<<collection_name>>/poster.png
+    sort_title: "!105_<<collection_name>>" #UPDATE THIS TO FIT YOUR NEEDS
     collection_order: title.asc
-    content_rating: R
+    content_rating: R #THIS MAKES EACH COLLECTION 'R' RATED TO PREVENT THEM FROM SHOWING UP IN CHILDREN PROFILES, UPDATE AS NEEDED OR REMOVE
     summary: "A curated collection of films set in or featuring the city of <<city>>."
     sync_mode: sync
     #schedule: hourly(15-21)   #UNCOMMENT AND UPDATE THIS TO FIT YOUR SCHEDULING NEEDS
